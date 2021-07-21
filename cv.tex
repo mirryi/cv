@@ -40,12 +40,6 @@
 
 %--------------------------------------
 
-\newcommand{\resumeItem}[2]{
-  \item\small{
-    \textbf{#1}{: #2 \vspace{-2pt}}
-  }
-}
-
 \newcommand{\resumeHeading}[4]{
     \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
@@ -57,7 +51,7 @@
   \vspace{-1pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
+      {\small#3} & \textit{\small #4} \\[3pt]
     \end{tabular*}\vspace{-5pt}
 }
 
@@ -67,14 +61,11 @@
     \end{tabular*}\vspace{-5pt}
 }
 
-\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
-
 \renewcommand{\labelitemii}{$\circ$}
-
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newenvironment{resumeSubHeadingList}{\begin{itemize}[leftmargin=*, label={}]}{\end{itemize}}
+\newenvironment{resumeItemList}{\vspace{-2pt}\begin{itemize}}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeItem}[2]{\item\small{\textbf{#1}{: #2 \vspace{-2pt}}}}
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
 
 % -----------------------------------------------
 
@@ -89,16 +80,17 @@
 
 % ------------- EDUCATION --------------
 \section{Education}
-  \resumeSubHeadingListStart{}
-
+  \begin{resumeSubHeadingList}
+  
     \resumeSubheading%
       {University of Michigan}{Ann Arbor, MI}
       {Bachelor of Science Engineering in Computer Science}{Aug. 2021 -- May 2025}
-
+    
     \resumeSubheading%
       {Conestoga Senior High School}{Berwyn, PA}
       {GPA: 5.20 / 5.00 (Weighted), 4.00 (Unweighted)}{Aug. 2017 -- June 2021}
-      \resumeItemListStart{}
+      %
+      \begin{resumeItemList}
         \resumeItem{Coursework}
           {AP Computer Science A, AP Computer Science Principles,
             Multi-Variable Calculus, AP Calculus BC, AP Statistics,
@@ -111,40 +103,39 @@
             AP English Literature \& Composition}
         \resumeItem{Extracurriculars}
           {Computer Science Club, National Honor Society, Operation Smile,
-            Key Club, Symphony Orchestra}
+            KEY Club, Symphony Orchestra}
         \resumeItem{Honors}
           {National Merit Finalist, National AP Scholar, George Washington Book Award}
-      \resumeItemListEnd{}
-
-  \resumeSubHeadingListEnd{}
+      \end{resumeItemList}
+  
+  \end{resumeSubHeadingList}
 
 
 % -------- PROGRAMMING SKILLS ----------
 \section{Programming Skills}
-  \resumeSubHeadingListStart{}
 
+  \begin{resumeSubHeadingList}
     \resumeSubItem{Languages}
-      {Rust, Python, Typescript, Java, JavaScript, Go, SQL, Bash, HTML, CSS, PHP, LaTeX, R}
+      {Rust, Python, Typescript, JavaScript, Java, Go, OCaml, Bash, HTML, CSS, PHP, LaTeX, R, SQL}
     \resumeSubItem{Technologies}
       {Git, Docker, Node.js, Webpack, ReactJS, Angular, Spring Boot, REST, MySQL, Unix, Linux}
-
-  \resumeSubHeadingListEnd{}
-
+  \end{resumeSubHeadingList}
+    
 
 % ------------- PROJECTS ---------------
 \section{Projects}
-  \resumeSubHeadingListStart{}
 
+  \begin{resumeSubHeadingList}
     \resumeSubheading%
       {Wikichan}{Mar. 2019 -- Present}
-      {\href{https://github.com/Dophin2009/wikichan}{https://github.com/Dophin2009/wikichan}}{}
+      {\url{https://github.com/Dophin2009/wikichan}}{}
 
       Browser extension that queries Wikipedia and displays a summary popup when hovering over a
         word or phrase. Built with ReactJS and RxJS.
 
     \resumeSubheading%
       {Compilers Independent Study}{Sept. 2020 -- May 2021}
-      {\href{https://github.com/Dophin2009/isc}{https://github.com/Dophin2009/isc}}{}
+      {\url{https://github.com/Dophin2009/isc}}{}
 
       Independent study course to learn about compiler infrastructure and programming language
         design. Worked on building a basic compiler to transform a minimal C-like language into x86
@@ -152,29 +143,30 @@
 
     \resumeSubheading%
       {StogaCS Infrastructure}{June 2019 -- May 2021}
-      {\href{https://github.com/stogacs}{https://github.com/stogacs}}{}
+      {\url{https://github.com/stogacs}}{}
 
-      \resumeItemListStart{}
+      Implemented and maintained digital infrastructure for the Conestoga Computer Science Club.
+      \begin{resumeItemList}
         \resumeItem{Sign-In System}
           {QR code-based sign-in system for club meeting attendance tracking.  Built with
             Angular 8, Spring Boot, Hibernate, MySQL, and AWS EC2. \\
-            \href{https://github.com/Dophin2009/stogacs-login}{\textit{https://github.com/Dophin2009/stogacs-login}}}
+            \url{https://github.com/Dophin2009/stogacs-login}}
         \resumeItem{stogacs.club}
           {Club portfolio website. Built with ReactJS and Webpack. \\
-            \href{https://github.com/stogacs/stogacs.club}{\textit{https://github.com/stogacs/stogacs.club}}}
-        \resumeItemListEnd{}
-  \resumeSubHeadingListEnd{}
+            \url{https://github.com/stogacs/stogacs.club}}
+      \end{resumeItemList}
+  \end{resumeSubHeadingList}
 
 
 % ------- LEADERSHIP EXPERIENCE --------
 \section{Leadership}
-  \resumeSubHeadingListStart{}
+  \begin{resumeSubHeadingList}
 
     \resumeSubheading%
       {Conestoga Computer Science Club}{Berwyn, PA}
       {Co-President}{Sept. 2017 -- May 2021}
 
-      \resumeItemListStart{}
+      \begin{resumeItemList}
         \resumeItem{Meetings}
           {Organized and engaged members in weekly meetings to share knowledge and collaborate on
             projects.}
@@ -184,13 +176,14 @@
         \resumeItem{Trips}
           {Coordinated and led one-day and overnight student-only trips to hackathons and
             competitions as far as Boston.}
-      \resumeItemListEnd{}
+      \end{resumeItemList}
 
-  \resumeSubHeadingListEnd{}
+  \end{resumeSubHeadingList}
+
 
 % ---------- WORK EXPERIENCE -----------
 \section{Work Experience}
-  \resumeSubHeadingListStart{}
+  \begin{resumeSubHeadingList}
 
     \resumeSubheading%
       {Huaxia Chinese School at Great Valley}{West Chester, PA}
@@ -199,7 +192,7 @@
       Managed instructor attendance and front desk logistics, assisted students and parents, and
         coordinated with school administrators.
 
-  \resumeSubHeadingListEnd{}
+  \end{resumeSubHeadingList}
 
 % -----------------------------------------------
 
