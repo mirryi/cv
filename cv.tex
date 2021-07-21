@@ -1,3 +1,4 @@
+% chktex-file 8 chktex-file 13
 \documentclass[letterpaper,11pt]{article}
 
 \usepackage{latexsym}
@@ -14,13 +15,11 @@
 \input{glyphtounicode}
 
 \pagestyle{fancy}
-% Clear all header and footer fields
 \fancyhf{}
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-% Adjust margins
 \addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1in}
@@ -29,16 +28,14 @@
 
 \urlstyle{same}
 
-\raggedbottom
-\raggedright
+\raggedbottom{}
+\raggedright{}
 \setlength{\tabcolsep}{0in}
 
-% Sections formatting
 \titleformat{\section}{
   \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+}{}{0em}{}[\color{black}\titlerule{} \vspace{-5pt}]
 
-% Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
 
 %--------------------------------------
@@ -85,27 +82,27 @@
 
 % -------------- HEADING ---------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\Large Eric Zhao} & Email : \href{mailto:21zhaoe@protonmail.com}{21zhaoe@protonmail.com}\\
+  \textbf{\Large Eric Zhao} & Email: \href{mailto:21zhaoe@protonmail.com}{21zhaoe@protonmail.com}\\
   \href{https://github.com/Dophin2009}{https://github.com/Dophin2009} & +1-610-504-8573 \\
 \end{tabular*}
 
 
 % ------------- EDUCATION --------------
 \section{Education}
-  \resumeSubHeadingListStart
+  \resumeSubHeadingListStart{}
 
-    \resumeSubheading
+    \resumeSubheading%
       {University of Michigan}{Ann Arbor, MI}
-      {Bachelor of Science Engineering in Computer Science}{Aug. 2021 - May 2025}
+      {Bachelor of Science Engineering in Computer Science}{Aug. 2021 -- May 2025}
 
-    \resumeSubheading
+    \resumeSubheading%
       {Conestoga Senior High School}{Berwyn, PA}
       {GPA: 5.20 / 5.00 (Weighted), 4.00 (Unweighted)}{Aug. 2017 -- June 2021}
-      \resumeItemListStart
+      \resumeItemListStart{}
         \resumeItem{Coursework}
           {AP Computer Science A, AP Computer Science Principles,
             Multi-Variable Calculus, AP Calculus BC, AP Statistics,
-            AP Physics C: Mechanics, AP Physics C: Electricity \& Magnetism,
+            AP Physics C: Mechanics, AP Physics C:\ Electricity \& Magnetism,
             AP Chemistry, AP Biology, AP Psychology,
             AP Macroeconomics, AP Microeconomics,
             AP World History, AP United States History,
@@ -117,47 +114,47 @@
             Key Club, Symphony Orchestra}
         \resumeItem{Honors}
           {National Merit Finalist, National AP Scholar, George Washington Book Award}
-      \resumeItemListEnd
+      \resumeItemListEnd{}
 
-  \resumeSubHeadingListEnd
+  \resumeSubHeadingListEnd{}
 
 
 % -------- PROGRAMMING SKILLS ----------
 \section{Programming Skills}
-  \resumeSubHeadingListStart
+  \resumeSubHeadingListStart{}
 
     \resumeSubItem{Languages}
       {Rust, Python, Typescript, Java, JavaScript, Go, SQL, Bash, HTML, CSS, PHP, LaTeX, R}
     \resumeSubItem{Technologies}
       {Git, Docker, Node.js, Webpack, ReactJS, Angular, Spring Boot, REST, MySQL, Unix, Linux}
 
-  \resumeSubHeadingListEnd
+  \resumeSubHeadingListEnd{}
 
 
 % ------------- PROJECTS ---------------
 \section{Projects}
-  \resumeSubHeadingListStart
+  \resumeSubHeadingListStart{}
 
-    \resumeSubheading
+    \resumeSubheading%
       {Wikichan}{Mar. 2019 -- Present}
       {\href{https://github.com/Dophin2009/wikichan}{https://github.com/Dophin2009/wikichan}}{}
 
       Browser extension that queries Wikipedia and displays a summary popup when hovering over a
         word or phrase. Built with ReactJS and RxJS.
 
-    \resumeSubheading
+    \resumeSubheading%
       {Compilers Independent Study}{Sept. 2020 -- May 2021}
       {\href{https://github.com/Dophin2009/isc}{https://github.com/Dophin2009/isc}}{}
 
-      Independent study course to learn about compiler infrastructure and programming langauge
+      Independent study course to learn about compiler infrastructure and programming language
         design. Worked on building a basic compiler to transform a minimal C-like language into x86
         assembly, written in Rust.
 
-    \resumeSubheading
+    \resumeSubheading%
       {StogaCS Infrastructure}{June 2019 -- May 2021}
       {\href{https://github.com/stogacs}{https://github.com/stogacs}}{}
 
-      \resumeItemListStart
+      \resumeItemListStart{}
         \resumeItem{Sign-In System}
           {QR code-based sign-in system for club meeting attendance tracking.  Built with
             Angular 8, Spring Boot, Hibernate, MySQL, and AWS EC2. \\
@@ -165,19 +162,19 @@
         \resumeItem{stogacs.club}
           {Club portfolio website. Built with ReactJS and Webpack. \\
             \href{https://github.com/stogacs/stogacs.club}{\textit{https://github.com/stogacs/stogacs.club}}}
-      \resumeItemListEnd
-  \resumeSubHeadingListEnd
+        \resumeItemListEnd{}
+  \resumeSubHeadingListEnd{}
 
 
 % ------- LEADERSHIP EXPERIENCE --------
 \section{Leadership}
-  \resumeSubHeadingListStart
+  \resumeSubHeadingListStart{}
 
-    \resumeSubheading
+    \resumeSubheading%
       {Conestoga Computer Science Club}{Berwyn, PA}
       {Co-President}{Sept. 2017 -- May 2021}
 
-      \resumeItemListStart
+      \resumeItemListStart{}
         \resumeItem{Meetings}
           {Organized and engaged members in weekly meetings to share knowledge and collaborate on
             projects.}
@@ -187,23 +184,22 @@
         \resumeItem{Trips}
           {Coordinated and led one-day and overnight student-only trips to hackathons and
             competitions as far as Boston.}
-      \resumeItemListEnd
+      \resumeItemListEnd{}
 
-  \resumeSubHeadingListEnd
+  \resumeSubHeadingListEnd{}
 
 % ---------- WORK EXPERIENCE -----------
 \section{Work Experience}
-  \resumeSubHeadingListStart
+  \resumeSubHeadingListStart{}
 
-    \resumeSubheading
+    \resumeSubheading%
       {Huaxia Chinese School at Great Valley}{West Chester, PA}
       {Front Desk Administrator}{Sept. 2018 - June 2020}
 
       Managed instructor attendance and front desk logistics, assisted students and parents, and
         coordinated with school administrators.
 
-  \resumeSubHeadingListEnd
-
+  \resumeSubHeadingListEnd{}
 
 % -----------------------------------------------
 
