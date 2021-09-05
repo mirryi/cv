@@ -1,17 +1,23 @@
 % chktex-file 8 chktex-file 13
+
+% {{{ Prelude
+% {{{ Options
 \documentclass[letterpaper,11pt]{article}
 
-\usepackage{latexsym}
+\usepackage[english]{babel}
+
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
+\usepackage{fancyhdr}
+
+\usepackage{latexsym}
 \usepackage{marvosym}
 \usepackage[usenames,dvipsnames]{color}
+
+\usepackage{tabularx}
 \usepackage{verbatim}
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
-\usepackage{fancyhdr}
-\usepackage[english]{babel}
-\usepackage{tabularx}
 \input{glyphtounicode}
 
 \pagestyle{fancy}
@@ -20,11 +26,7 @@
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-\addtolength{\oddsidemargin}{-0.5in}
-\addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
+\usepackage[top=0.3in, bottom=0.3in, left=0.3in, right=0.3in]{geometry}
 
 \urlstyle{same}
 
@@ -37,9 +39,8 @@
 }{}{0em}{}[\color{black}\titlerule{} \vspace{-5pt}]
 
 \pdfgentounicode=1
-
-%--------------------------------------
-
+% }}}
+% {{{ Commands
 \newcommand{\resumeHeading}[4]{
     \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
@@ -48,10 +49,10 @@
 }
 
 \newcommand{\resumeSubheading}[4]{
-  \vspace{-1pt}\item
+  \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
-      {\small#3} & \textit{\small #4} \\[3pt]
+      {#3} & \textit{\small #4} \\[3pt]
     \end{tabular*}\vspace{-5pt}
 }
 
@@ -61,139 +62,179 @@
     \end{tabular*}\vspace{-5pt}
 }
 
+\newcommand{\resumeSubSubSubheading}[2]{
+    \begin{tabular*}{0.97\textwidth}{l}
+      \textbf{#1:} #2 \\
+    \end{tabular*}
+}
+
 \renewcommand{\labelitemii}{$\circ$}
 \newenvironment{resumeSubHeadingList}{\begin{itemize}[leftmargin=*, label={}]}{\end{itemize}}
 \newenvironment{resumeItemList}{\vspace{-2pt}\begin{itemize}}{\end{itemize}\vspace{-5pt}}
 \newcommand{\resumeItem}[2]{\item\small{\textbf{#1}{: #2 \vspace{-2pt}}}}
 \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+% }}}
+% }}}
 
-% -----------------------------------------------
-
+% {{{ Document
 \begin{document}
 
-% -------------- HEADING ---------------
+% {{{ Heading
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
   \textbf{\Large Eric Zhao} & Email: \href{mailto:21zhaoe@protonmail.com}{21zhaoe@protonmail.com}\\
   \href{https://github.com/Dophin2009}{https://github.com/Dophin2009} & +1-610-504-8573 \\
 \end{tabular*}
+% }}}
 
-
-% ------------- EDUCATION --------------
+% {{{ Education
+\vspace*{-5pt}
 \section{Education}
+
   \begin{resumeSubHeadingList}
-  
     \resumeSubheading%
       {University of Michigan}{Ann Arbor, MI}
-      {Bachelor of Science Engineering in Computer Science}{Aug. 2021 -- May 2025}
-    
-    \resumeSubheading%
-      {Conestoga Senior High School}{Berwyn, PA}
-      {GPA: 5.20 / 5.00 (Weighted), 4.00 (Unweighted)}{Aug. 2017 -- June 2021}
+      {Bachelor of Engineering, BE - Computer Science}{Aug. 2021 -- May 2025}
       %
       \begin{resumeItemList}
         \resumeItem{Coursework}
-          {AP Computer Science A, AP Computer Science Principles,
-            Multi-Variable Calculus, AP Calculus BC, AP Statistics,
-            AP Physics C: Mechanics, AP Physics C:\ Electricity \& Magnetism,
-            AP Chemistry, AP Biology, AP Psychology,
-            AP Macroeconomics, AP Microeconomics,
-            AP World History, AP United States History,
-            AP United States Government \& Politics,
-            AP English Language \& Composition,
-            AP English Literature \& Composition}
+          {EECS 203 (Discrete Mathematics), EECS 280 (Programming and Introductory Data Structures)}
+      \end{resumeItemList}
+    
+    \resumeSubheading%
+      {Conestoga Senior High School}{Berwyn, PA}
+      {GPA: 5.20 / 5.00 (Weighted), 4.00 (Unweighted), SAT: 1570}{Aug. 2017 -- June 2021}
+      %
+      \begin{resumeItemList}
+        % \resumeItem{Coursework}
+          % {AP Computer Science A, AP Computer Science Principles,
+            % Multi-Variable Calculus, AP Calculus BC, AP Statistics,
+            % AP Physics C: Mechanics, AP Physics C:\ Electricity \& Magnetism,
+            % AP Chemistry, AP Biology, AP Psychology,
+            % AP Macroeconomics, AP Microeconomics,
+            % AP World History, AP United States History,
+            % AP United States Government \& Politics,
+            % AP English Language \& Composition,
+            % AP English Literature \& Composition}
         \resumeItem{Extracurriculars}
-          {Computer Science Club, National Honor Society, Operation Smile,
-            KEY Club, Symphony Orchestra}
+          {Computer Science Club, National Honor Society, Operation Smile,  KEY Club,
+            Symphony Orchestra}
         \resumeItem{Honors}
           {National Merit Finalist, National AP Scholar, George Washington Book Award}
       \end{resumeItemList}
-  
   \end{resumeSubHeadingList}
+% }}}
 
-
-% -------- PROGRAMMING SKILLS ----------
-\section{Programming Skills}
+% {{{ Skills
+\section{Skills}
+  \vspace*{-5pt}
 
   \begin{resumeSubHeadingList}
-    \resumeSubItem{Languages}
-      {Rust, Python, Typescript, JavaScript, Java, Go, OCaml, Bash, HTML, CSS, PHP, LaTeX, R, SQL}
-    \resumeSubItem{Technologies}
+    \resumeSubSubSubheading{Languages}%
+      {Rust, Python, Typescript, JavaScript, Java, Go, OCaml, Bash, HTML, CSS, PHP, LaTeX, R}
+    \resumeSubSubSubheading{Technologies}%
       {Git, Docker, Node.js, Webpack, ReactJS, Angular, Spring Boot, REST, MySQL, Unix, Linux}
   \end{resumeSubHeadingList}
-    
+% }}} 
 
-% ------------- PROJECTS ---------------
+% {{{ Projects
 \section{Projects}
 
   \begin{resumeSubHeadingList}
     \resumeSubheading%
-      {Wikichan}{Mar. 2019 -- Present}
-      {\url{https://github.com/Dophin2009/wikichan}}{}
+      {Wikichan}%
+      {\small\itshape Mar. 2019 -- Present}%
+      {\small \url{https://github.com/Dophin2009/wikichan}}%
+      {}
 
       Browser extension that queries Wikipedia and displays a summary popup when hovering over a
-        word or phrase. Built with ReactJS and RxJS.
+      word or phrase, built with ReactJS and RxJS.
 
     \resumeSubheading%
-      {Compilers Independent Study}{Sept. 2020 -- May 2021}
-      {\url{https://github.com/Dophin2009/isc}}{}
+      {Compilers Independent Study}%
+      {\small\itshape Sept. 2020 -- May 2021}%
+      {\small \url{https://github.com/Dophin2009/isc}}%
+      {}
 
       Independent study course to learn about compiler infrastructure and programming language
         design. Worked on building a basic compiler to transform a minimal C-like language into x86
         assembly, written in Rust.
 
     \resumeSubheading%
-      {StogaCS Infrastructure}{June 2019 -- May 2021}
-      {\url{https://github.com/stogacs}}{}
+      {StogaCS Infrastructure}%
+      {\small\itshape June 2019 -- May 2021}%
+      {\small \url{https://github.com/stogacs}}%
+      {}
 
-      Implemented and maintained digital infrastructure for the Conestoga Computer Science Club.
-      \begin{resumeItemList}
-        \resumeItem{Sign-In System}
-          {QR code-based sign-in system for club meeting attendance tracking.  Built with
-            Angular 8, Spring Boot, Hibernate, MySQL, and AWS EC2. \\
-            \url{https://github.com/Dophin2009/stogacs-login}}
-        \resumeItem{stogacs.club}
-          {Club portfolio website. Built with ReactJS and Webpack. \\
-            \url{https://github.com/stogacs/stogacs.club}}
-      \end{resumeItemList}
+      Implemented and maintained digital infrastructure for the Conestoga Computer Science Club,
+        including a QR code-based club meeting sign-in system, built with Angular 8, Spring Boot,
+        MySQL, and AWS EC2.
   \end{resumeSubHeadingList}
+% }}}
 
+% {{{ Research
+\section{Research}
 
-% ------- LEADERSHIP EXPERIENCE --------
-\section{Leadership}
+  \begin{resumeSubHeadingList}
+    \resumeSubheading%
+      {Future of Programming Lab}%
+      {Ann Arbor, MI}%
+      {Student Researcher}%
+      {June 2021 - Present}
+
+      Developing Hazel, a functional programming language and structure editor capable of analysing
+        and running incomplete programs, under Professor Cyrus Omar.
+  \end{resumeSubHeadingList}
+% }}}
+
+% {{{ Work
+\section{Work}
   \begin{resumeSubHeadingList}
 
     \resumeSubheading%
-      {Conestoga Computer Science Club}{Berwyn, PA}
-      {Co-President}{Sept. 2017 -- May 2021}
+      {814 Interactive}%
+      {Berwyn, PA}%
+      {Software Development Intern}%
+      {May 2021 - June 2021}
 
-      \begin{resumeItemList}
-        \resumeItem{Meetings}
-          {Organized and engaged members in weekly meetings to share knowledge and collaborate on
-            projects.}
-        \resumeItem{Workshops}
-          {Wrote and directed lectures and workshops on various topics, including text encoding
-            techniques, functional programming, and REST APIs.}
-        \resumeItem{Trips}
-          {Coordinated and led one-day and overnight student-only trips to hackathons and
-            competitions as far as Boston.}
-      \end{resumeItemList}
-
-  \end{resumeSubHeadingList}
-
-
-% ---------- WORK EXPERIENCE -----------
-\section{Work Experience}
-  \begin{resumeSubHeadingList}
+      Worked with ReactJS and Eloquent to develop prototype WordPress tooling to ease the creation
+        of location-targeted website content and improve SEO for local client businesses.
 
     \resumeSubheading%
-      {Huaxia Chinese School at Great Valley}{West Chester, PA}
-      {Front Desk Administrator}{Sept. 2018 - June 2020}
+      {Huaxia Chinese School at Great Valley}%
+      {West Chester, PA}%
+      {Front Desk Administrator}%
+      {Sept. 2018 - June 2020}
 
       Managed instructor attendance and front desk logistics, assisted students and parents, and
         coordinated with school administrators.
 
   \end{resumeSubHeadingList}
+% }}}
 
-% -----------------------------------------------
+% {{{ Leadership
+\section{Leadership}
+  \begin{resumeSubHeadingList}
+
+    \resumeSubheading%
+      {Conestoga Computer Science Club}%
+      {Berwyn, PA}%
+      {Co-President}%
+      {Sept. 2017 -- May 2021}
+
+      \begin{resumeItemList}
+        \resumeItem{Meetings}%
+          {Organized and engaged members in weekly meetings to share knowledge and collaborate on
+            projects.}
+        \resumeItem{Workshops}%
+          {Wrote and directed lectures and workshops on various topics, including text encoding
+            techniques, functional programming, and REST APIs.}
+        \resumeItem{Trips}%
+          {Coordinated and led one-day and overnight student-only trips to hackathons and
+            competitions.}
+      \end{resumeItemList}
+
+  \end{resumeSubHeadingList}
+% }}}
 
 \end{document}
+% }}}
