@@ -3,6 +3,7 @@
 % {{{ Prelude
 % {{{ Options
 \documentclass[letterpaper,11pt]{article}
+\usepackage{libertine}
 
 \usepackage[english]{babel}
 
@@ -35,7 +36,7 @@
 \setlength{\tabcolsep}{0in}
 
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
 }{}{0em}{}[\color{black}\titlerule{} \vspace{-5pt}]
 
 \pdfgentounicode=1
@@ -52,7 +53,7 @@
   \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
-      {#3} & {\small #4} \\[3pt]
+      {#3} & \textit{\small #4} \\[3pt]
     \end{tabular*}\vspace{-5pt}
 }
 
@@ -99,7 +100,7 @@
 
 % {{{ Heading
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\Large Eric Zhao} & Email: \href{mailto:21zhaoe@protonmail.com}{21zhaoe@protonmail.com}\\
+  \textbf{\Large Eric Zhao} & \href{mailto:21zhaoe@protonmail.com}{21zhaoe@protonmail.com}\\
   \href{https://github.com/Dophin2009}{https://github.com/Dophin2009} & +1-610-504-8573 \\
 \end{tabular*}
 % }}}
@@ -166,7 +167,7 @@
   \begin{resumeSubHeadingList}
     \resumeSubheading%
       {Wikichan}%
-      {\small March 2019 -- Present}%
+      {\small\itshape March 2019 -- Present}%
       {\small \url{https://github.com/Dophin2009/wikichan}}%
       {}
 
@@ -177,7 +178,7 @@
 
     \resumeSubheading%
       {Compilers Independent Study}%
-      {\small September 2020 -- May 2021}%
+      {\small\itshape September 2020 -- May 2021}%
       {\small \url{https://github.com/Dophin2009/isc}}%
       {}
 
@@ -189,7 +190,7 @@
 
     \resumeSubheading%
       {StogaCS Infrastructure}%
-      {\small June 2019 -- May 2021}%
+      {\small\itshape June 2019 -- May 2021}%
       {\small \url{https://github.com/stogacs}}%
       {}
 
