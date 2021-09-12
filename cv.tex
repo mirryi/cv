@@ -52,7 +52,7 @@
   \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
-      {#3} & \textit{\small #4} \\[3pt]
+      {#3} & {\small #4} \\[3pt]
     \end{tabular*}\vspace{-5pt}
 }
 
@@ -74,8 +74,21 @@
 }
 
 \renewcommand{\labelitemii}{$\circ$}
-\newenvironment{resumeSubHeadingList}{\begin{itemize}[leftmargin=*, label={}]}{\end{itemize}}
-\newenvironment{resumeItemList}{\vspace{-2pt}\begin{itemize}}{\end{itemize}\vspace{-5pt}}
+
+\newenvironment{resumeSubHeadingList}{
+  \begin{itemize}[leftmargin=*, label={}]
+}{
+  \end{itemize}
+}
+
+\newenvironment{resumeItemList}{
+  \vspace{-2pt}
+  \begin{itemize}
+}{
+  \end{itemize}
+  \vspace{-5pt}
+}
+
 \newcommand{\resumeItem}[2]{\item\small{\textbf{#1}{: #2 \vspace{-2pt}}}}
 \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
 % }}}
@@ -97,8 +110,10 @@
 
   \begin{resumeSubHeadingList}
     \resumeSubheading%
-      {University of Michigan}{Ann Arbor, MI}
-      {Bachelor of Engineering, BE - Computer Science}{Aug. 2021 -- May 2025}
+      {University of Michigan}
+      {Ann Arbor, MI}
+      {Bachelor of Engineering, BE - Computer Science}
+      {August 2021 -- May 2025}
       %
       \begin{resumeItemList}
         \resumeItem{Coursework}
@@ -106,8 +121,10 @@
       \end{resumeItemList}
     
     \resumeSubheading%
-      {Conestoga Senior High School}{Berwyn, PA}
-      {GPA: 5.20 / 5.00 (Weighted), 4.00 (Unweighted), SAT: 1570}{Aug. 2017 -- June 2021}
+      {Conestoga Senior High School}
+      {Berwyn, PA}
+      {GPA: 5.20 / 5.00 (Weighted), 4.00 (Unweighted), SAT: 1570}
+      {August 2017 -- June 2021}
       %
       \begin{resumeItemList}
         % \resumeItem{Coursework}
@@ -149,7 +166,7 @@
   \begin{resumeSubHeadingList}
     \resumeSubheading%
       {Wikichan}%
-      {\small\itshape Mar. 2019 -- Present}%
+      {\small March 2019 -- Present}%
       {\small \url{https://github.com/Dophin2009/wikichan}}%
       {}
 
@@ -160,19 +177,19 @@
 
     \resumeSubheading%
       {Compilers Independent Study}%
-      {\small\itshape Sept. 2020 -- May 2021}%
+      {\small September 2020 -- May 2021}%
       {\small \url{https://github.com/Dophin2009/isc}}%
       {}
 
       \resumeSubheadingDescription{
-        Independent study course to learn about compiler infrastructure and programming language
-        design. Worked on building a basic compiler to transform a minimal C-like language into x86
-        assembly, written in Rust.
+        Engaged in an independent study to learn about compiler infrastructure and programming
+        language design. Worked on building a basic compiler to transform a minimal C-like language
+        into x86 assembly, written in Rust.
       }
 
     \resumeSubheading%
       {StogaCS Infrastructure}%
-      {\small\itshape June 2019 -- May 2021}%
+      {\small June 2019 -- May 2021}%
       {\small \url{https://github.com/stogacs}}%
       {}
 
@@ -220,7 +237,7 @@
       {Huaxia Chinese School at Great Valley}%
       {West Chester, PA}%
       {Front Desk Administrator}%
-      {Sept. 2018 - June 2020}
+      {September 2018 - June 2020}
 
       \resumeSubheadingDescription{
         Managed instructor attendance and front desk logistics, assisted students and parents, and
@@ -238,15 +255,15 @@
       {Conestoga Computer Science Club}%
       {Berwyn, PA}%
       {Co-President}%
-      {Sept. 2017 -- May 2021}
+      {September 2017 -- May 2021}
 
       \begin{resumeItemList}
         \resumeItem{Meetings}%
           {Organized and engaged members in weekly meetings to share knowledge and collaborate on
             projects.}
         \resumeItem{Workshops}%
-          {Wrote and directed lectures and workshops on various topics, including text encoding
-            techniques, functional programming, and REST APIs.}
+          {Wrote and directed lectures and hands-on workshops on various topics, including text encoding,
+            functional programming, and REST APIs.}
         \resumeItem{Trips}%
           {Coordinated and led one-day and overnight student-only trips to hackathons and
             competitions.}
