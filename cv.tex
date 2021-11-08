@@ -1,8 +1,7 @@
 % chktex-file 8 chktex-file 13
-% {{{ Prelude
 % {{{ Options
 \documentclass[letterpaper,11pt]{article}
-\usepackage{libertine}
+\usepackage{libertinus}
 
 \usepackage[english]{babel}
 
@@ -45,11 +44,11 @@
     \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-5pt}
+    \end{tabular*}\vspace{-12pt}
 }
 
 \newcommand{\resumeSubheading}[4]{
-  \vspace{-2pt}\item
+  \vspace{-3pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       {#3} & \textit{\small #4} \\[3pt]
@@ -92,8 +91,6 @@
 \newcommand{\resumeItem}[2]{\item\small{\textbf{#1}{: #2 \vspace{-2pt}}}}
 \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
 % }}}
-% }}}
-% {{{ Document
 \begin{document}
 % {{{ Heading
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
@@ -118,26 +115,16 @@
             \textit{Winter 2022}: Data Structures and Algorithms, Introduction to Computer
             Organization, Honors Multivariable and Vector Calculus}
         \resumeItem{Organizations}
-          {Michigan Hackers, Michigan Aeronautical Science Association}
+          {Michigan Hackers, Michigan Aeronautical Science Association (Avionics Team)}
       \end{resumeItemList}
 
     \resumeSubheading%
       {Conestoga Senior High School}
       {Berwyn, PA}
-      {GPA: 5.20 / 5.00 (Weighted), 4.00 (Unweighted), SAT: 1570}
+      {GPA: 5.20/5.00 (Weighted), 4.00/4.00 (Unweighted); SAT: 1570/1600}
       {August 2017 -- June 2021}
       %
       \begin{resumeItemList}
-        % \resumeItem{Coursework}
-          % {AP Computer Science A, AP Computer Science Principles,
-            % Multi-Variable Calculus, AP Calculus BC, AP Statistics,
-            % AP Physics C: Mechanics, AP Physics C:\ Electricity \& Magnetism,
-            % AP Chemistry, AP Biology, AP Psychology,
-            % AP Macroeconomics, AP Microeconomics,
-            % AP World History, AP United States History,
-            % AP United States Government \& Politics,
-            % AP English Language \& Composition,
-            % AP English Literature \& Composition}
         \resumeItem{Extracurriculars}
           {Computer Science Club, National Honor Society, Operation Smile,  KEY Club,
             Symphony Orchestra}
@@ -153,56 +140,15 @@
   \begin{resumeSubHeadingList}
     \resumeSubSubSubheading{Languages}%
       {Rust, C, C++, Python, Typescript, JavaScript, Java, Go, OCaml, Bash, HTML, CSS, LaTeX, R}
+    \vspace*{-2pt}
     \resumeSubSubSubheading{Technologies}%
       {Git, Docker, Node.js, Webpack, ReactJS, Angular, Spring Boot, REST, MySQL, Unix, Linux}
   \end{resumeSubHeadingList}
 
   \vspace*{0pt}
 % }}} 
-% {{{ Projects
-\vspace*{-2pt}
-\section{Projects}
-
-  \begin{resumeSubHeadingList}
-    \resumeSubheading%
-      {Wikichan}%
-      {\small\itshape March 2019 -- Present}%
-      {\small \url{https://github.com/Dophin2009/wikichan}}%
-      {}
-
-      \resumeSubheadingDescription{
-        Browser extension that queries Wikipedia and displays a summary popup when hovering over a
-        word or phrase, built with ReactJS and RxJS.
-      }
-
-    \resumeSubheading%
-      {Compilers Independent Study}%
-      {\small\itshape September 2020 -- May 2021}%
-      {\small \url{https://github.com/Dophin2009/isc}}%
-      {}
-
-      \resumeSubheadingDescription{
-        Engaged in an independent study to learn about compiler infrastructure and programming
-        language design. Worked on building a basic compiler to transform a minimal C-like language
-        into x86 assembly, written in Rust.
-      }
-
-    \resumeSubheading%
-      {StogaCS Infrastructure}%
-      {\small\itshape June 2019 -- May 2021}%
-      {\small \url{https://github.com/stogacs}}%
-      {}
-
-      \resumeSubheadingDescription{
-        Implemented and maintained digital infrastructure for the Conestoga Computer Science Club,
-        including a QR code-based club meeting sign-in system and website, built with ReactJS,
-        Angular 8, Spring Boot, MySQL, and AWS EC2.
-      }
-  \end{resumeSubHeadingList}
-% }}}
 % {{{ Research
 \section{Research}
-
   \begin{resumeSubHeadingList}
     \resumeSubheading%
       {Future of Programming Lab}%
@@ -211,15 +157,15 @@
       {June 2021 - Present}
 
       \resumeSubheadingDescription{
-        Developing Hazel, a functional programming language and novel structure editor calculus
-        capable of analysing and running incomplete programs, under Professor Cyrus Omar.
+        Formalizing and implementing Hazel, a functional programming language and novel live
+        programming environment capable of analysing and evaluating incomplete programs, with
+        Professor Cyrus Omar and a team of 20+ researchers.
       }
   \end{resumeSubHeadingList}
 % }}}
 % {{{ Work
 \section{Work}
   \begin{resumeSubHeadingList}
-
     \resumeSubheading%
       {814 Interactive}%
       {Berwyn, PA}%
@@ -227,8 +173,9 @@
       {May 2021 - June 2021}
 
       \resumeSubheadingDescription{
-        Worked with ReactJS and Eloquent to develop prototype WordPress tooling to ease the creation
-        of location-targeted website content and improve SEO for local client businesses.
+        Worked with ReactJS, Laravel Eloquent, and other web technologies to develop a tooling
+        prototype to ease the creation of location- and service-targeted website content and improve
+        SEO for local client businesses.
       }
 
     \resumeSubheading%
@@ -238,10 +185,9 @@
       {September 2018 - June 2020}
 
       \resumeSubheadingDescription{
-        Managed attendance and front desk logistics, assisted students and parents, and coordinated
-        with school administrators.
+        Managed instructor attendance and front desk logistics, regularly assisted students and
+        parents, and coordinated with school administrators.
       }
-
   \end{resumeSubHeadingList}
 % }}}
 % {{{ Leadership
@@ -249,24 +195,57 @@
   \begin{resumeSubHeadingList}
 
     \resumeSubheading%
-      {Conestoga Computer Science Club}%
+      {Conestoga High School Computer Science Club}%
       {Berwyn, PA}%
       {Co-President}%
       {September 2017 -- May 2021}
 
-      \begin{resumeItemList}
-        \resumeItem{Meetings}%
-          {Organized and engaged members in weekly meetings to share knowledge and collaborate on
-            projects.}
-        \resumeItem{Workshops}%
-          {Wrote and directed lectures and hands-on workshops on various topics, from text encoding
-          to REST APIs.}
-        \resumeItem{Trips}%
-          {Coordinated and led one-day and overnight student-only trips to hackathons and
-            competitions.}
-      \end{resumeItemList}
+      \resumeSubheadingDescription{
+        Organized and engaged members in weekly meetings to share knowledge and collaborate on
+        projects. Directed lectures and workshops on various topics, from text encoding to
+        REST APIs. Coordinated and led student-only trips to hackathons.
+      }
+  \end{resumeSubHeadingList}
+% }}}
+% {{{ Projects
+\vspace*{-9pt}
+\section{Projects}
+  \begin{resumeSubHeadingList}
+    \resumeSubheading
+      {Wikichan}
+      {\small\itshape March 2019 -- Present}
+      {\small \url{https://github.com/Dophin2009/wikichan}}
+      {}
 
+      \resumeSubheadingDescription{
+        Using ReactJS, RxJS, and modern web technologies, developed a cross-platform browser
+        extension that queries Wikipedia and displays a helpful summary popup when hovering over a
+        word or phrase.
+      }
+
+    \resumeSubheading
+      {Compilers Independent Study}
+      {\small\itshape September 2020 -- May 2021}
+      {\small \url{https://github.com/Dophin2009/isc}}
+      {}
+
+      \resumeSubheadingDescription{
+        Engaged in an independent study course to learn about compiler infrastructure and
+        programming language design. Worked on building a basic compiler from scratch to transform a
+        minimal C-like language into x86 assembly, written in Rust.
+      }
+
+    \resumeSubheading
+      {StogaCS Infrastructure}
+      {\small\itshape June 2019 -- May 2021}
+      {\small \url{https://github.com/stogacs}}
+      {}
+
+      \resumeSubheadingDescription{
+        In collaboration with other members, designed, implemented, and maintained digital
+        infrastructure for the Computer Science Club, including a QR code-based meeting sign-in
+        application, built with ReactJS, Angular 8, Spring, MySQL, and AWS EC2.
+      }
   \end{resumeSubHeadingList}
 % }}}
 \end{document}
-% }}}
