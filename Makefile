@@ -1,19 +1,22 @@
+DOCKER ?= docker
 LATEXMK ?= latexmk
-ENTR ?= entr
 
 SOURCES = $(wildcard *.tex)
 TARGETS = $(patsubst %.tex,%.pdf,$(SOURCES))
 
-.PHONY : clean clean-aux
-
+ifdef USE_DOCKER
+%.pdf : %.tex
+	DOCKER_BUILDKIT=1 $(DOCKER) build . --output .
+else
 %.pdf : %.tex
 	$(LATEXMK) $*.tex
 	mv target/$*.pdf $*.pdf
+endif
 
+.PHONY : all
 all : $(TARGETS)
 
-clean : clean-aux
+.PHONY : clean
+clean :
 	rm -f *.pdf
-
-clean-aux :
 	rm -rf target
