@@ -1,14 +1,15 @@
 DOCKER ?= docker
 LATEXMK ?= latexmk
 
-SOURCES = $(wildcard *.tex)
+SOURCES = cv.tex
+DEPS 		= prelude.tex
 TARGETS = $(patsubst %.tex,%.pdf,$(SOURCES))
 
 ifdef USE_DOCKER
-%.pdf : %.tex
+%.pdf : %.tex $(DEPS)
 	DOCKER_BUILDKIT=1 $(DOCKER) build . --output .
 else
-%.pdf : %.tex
+%.pdf : %.tex $(DEPS)
 	$(LATEXMK) $*.tex
 	mv target/$*.pdf $*.pdf
 endif
