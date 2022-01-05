@@ -42,7 +42,7 @@ ENV PATH="/opt/texlive/bin/x86_64-linux:${PATH}"
 RUN apk --no-cache add make \
   && tlmgr update --self \
   && tlmgr update --list \
-  && tlmgr install collection-latex latexmk enumitem marvosym titlesec xkeyval \
+  && tlmgr install collection-latex latexmk enumitem titlesec xkeyval \
   fontaxes libertinus libertinus-type1
 
 WORKDIR /build
