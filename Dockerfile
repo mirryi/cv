@@ -46,9 +46,9 @@ RUN apk --no-cache add make \
   fontaxes libertinus libertinus-type1
 
 WORKDIR /build
-COPY Makefile latexmkrc cv.tex prelude.tex ./
+COPY Makefile latexmkrc resume.tex preamble.tex ./
 RUN make
 
 FROM scratch as export
 WORKDIR /
-COPY --from=build /build/cv.pdf .
+COPY --from=build /build/resume.pdf .
