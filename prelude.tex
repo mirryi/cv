@@ -1,79 +1,91 @@
-\usepackage[top=0.25in, bottom=0.25in,
-            left=0.3in, right=0.3in]{geometry}
+\usepackage[top=0.3in, bottom=0.3in,
+            left=0.4in, right=0.4in]{geometry}
+
+\raggedright
+\raggedbottom
 
 \usepackage{libertinus}
 \usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
 
-\usepackage{enumitem}
+% Table, list utilities
 \usepackage{tabularx}
-\usepackage{verbatim}
+\usepackage{enumitem}
+\renewcommand{\labelitemii}{$\circ$}
 
+% Plain url style
 \usepackage[hidelinks]{hyperref}
 \urlstyle{same}
 
+% Configure section formats
 \usepackage{titlesec}
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\fancyhf{}
-\fancyfoot{}
 
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
-
-\raggedbottom{}
-\raggedright{}
+% Tight columns
 \setlength{\tabcolsep}{0in}
 
-\titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large\bfseries
-}{}{0em}{}[\titlerule{} \vspace{-5pt}]
-
-\renewcommand{\labelitemii}{$\circ$}
-
-\newcommand{\resumeHeading}[4]{
-  \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
-    \textbf{#1} & #2 \\
-    \textit{\small#3} & \textit{\small #4} \\
-  \end{tabular*}\vspace{-12pt}
-}
-\newcommand{\resumeSubheading}[4]{
-  \vspace{-3pt}\item
-  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-    \textbf{#1} & #2 \\
-    {#3} & \textit{\small #4} \\[3pt]
-  \end{tabular*}\vspace{-5pt}
-}
-\newcommand{\resumeSubheadingDescription}[1]{
-  \parbox{0.97\textwidth}{#1}
+\newcommand{\rheading}[4]{%
+  \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+    \textsc{\textbf{\LARGE #1}} & #2 \\
+    {\small #3} & {\small #4}
+  \end{tabular*}
+  \vspace*{-\baselineskip}
 }
 
-\newenvironment{resumeSubHeadingList}{
+\titleformat{\section}
+  {\scshape\raggedright\Large\bfseries}
+  {}
+  {0em}
+  {}
+  [\titlerule{}\vspace*{-0.3\baselineskip}]
+\newcommand{\rsection}[1]{
+  \section{#1}
+}
+
+\newenvironment{rsectionlist}{
   \begin{itemize}[leftmargin=*, label={}]
 }{
   \end{itemize}
+  \vspace*{-1.5\baselineskip}
 }
-\newcommand{\resumeSubSubheading}[2]{
-  \item \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-5pt}
-}
-\newcommand{\resumeSubSubSubheading}[2]{
-  \vspace{3pt}
-  \item \begin{tabular*}{0.97\textwidth}{l}
-      \textbf{#1:} #2 \\
-    \end{tabular*}\vspace{-8pt}
+\newcommand{\rsectionitem}[4]{
+  \item \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{#3} & \textit{\small #4}
+    \end{tabular*}
 }
 
-\newenvironment{resumeItemList}{
-  \vspace{-2pt}
-  \begin{itemize}
+\newcommand{\rsectiondesc}[1]{
+  \vspace{0.3\baselineskip}
+  #1
+}
+
+\newenvironment{rlinelist}{
+  \begin{itemize}[leftmargin=*, label={}]
+  \setlength{\itemsep}{0pt}
+  \setlength{\parskip}{2pt}
+  \setlength{\parsep}{0pt}
 }{
   \end{itemize}
-  \vspace{-5pt}
+  \vspace*{-1.5\baselineskip}
 }
-\newcommand{\resumeItem}[2]{
-  \item\small{\textbf{#1}{: #2 \vspace{-2pt}}}
+\newcommand{\rline}[2]{
+  \item \begin{tabular*}{0.98\textwidth}{l}
+      \textbf{#1 } #2 \\
+    \end{tabular*}
 }
-\newcommand{\resumeSubItem}[2]{
-  \resumeItem{#1}{#2}\vspace{-4pt}
+
+\newenvironment{rpointlist}{
+  \vspace*{-0.5\baselineskip}
+  \begin{itemize}
+  \setlength{\itemsep}{0pt}
+  \setlength{\parskip}{1pt}
+  \setlength{\parsep}{0pt}
+}{
+  \end{itemize}
+}
+\newcommand{\rpoint}[2]{
+  \item \small{\textbf{#1}{: #2}}
+}
+\newcommand{\rpointlone}[1]{
+  \item \small{#1}
 }

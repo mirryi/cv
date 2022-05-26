@@ -3,154 +3,117 @@
 \input{prelude.tex}
 
 \begin{document}
-\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\Large Eric Zhao} & \href{mailto:21zhaoe@protonmail.com}{21zhaoe@protonmail.com}\\
-  \href{https://github.com/mirryi}{https://github.com/mirryi} & +1-610-504-8573 \\
-\end{tabular*}
+\rheading
+  {Eric Zhao}
+  {\href{mailto:21zhaoe@protonmail.com}{21zhaoe@protonmail.com}}
+  {\href{https://github.com/mirryi}{https://github.com/mirryi}}
+  {+1-610-504-8573}
 
-\vspace*{-5pt}
-\section{Education}
-  \begin{resumeSubHeadingList}
-    \resumeSubheading%
+\rsection{Education}
+  \begin{rsectionlist}
+    \rsectionitem%
       {University of Michigan}
       {Ann Arbor, MI}
-      {Bachelor of Engineering, BSE - Computer Science, GPA: 4.00/4.00}
+      {B.Eng. in Computer Science, Cumulative GPA: 4.00/4.00}
       {August 2021 -- May 2024}
       %
-      \begin{resumeItemList}
-        \resumeItem{Coursework}
+      \begin{rpointlist}
+        \rpoint
+          {Related Coursework}
           {Discrete Mathematics, Programming and Introductory Data Structures, Data Structures and
             Algorithms, \\ Introduction to Computer Organization, Linear Algebra.
             \emph{Fall 2022}: Introduction to Operating Systems, Advanced Programming Languages,
             Introduction to Modern Algebra}
-        \resumeItem{Organizations}
-          {Michigan Hackers, Michigan Aeronautical Science Association (Avionics)}
-        \resumeItem{Honors}
-          {William J. Branstrom Prize, Dean's Honor}
-      \end{resumeItemList}
+        \rpoint
+          {Activities \& Awards}
+          {Michigan Hackers, Michigan Aeronautical Science Association (Avionics Team), William J.
+            Branstrom Prize, Dean's Honor List}
+      \end{rpointlist}
+  \end{rsectionlist}
 
-    \resumeSubheading%
-      {Conestoga Senior High School}
-      {Berwyn, PA}
-      {GPA: 5.20/5.00 (Weighted), 4.00/4.00 (Unweighted); SAT: 1570/1600}
-      {August 2017 -- June 2021}
-      %
-      \begin{resumeItemList}
-        \resumeItem{Extracurriculars}
-          {Computer Science Club (Co-President), National Honor Society, KEY Club, Symphony Orchestra}
-        \resumeItem{Honors}
-          {National Merit Finalist, National AP Scholar, George Washington Book Award}
-      \end{resumeItemList}
-  \end{resumeSubHeadingList}
-
-\section{Skills}
-  \vspace*{-5pt}
-
-  \begin{resumeSubHeadingList}
-    \resumeSubSubSubheading{Languages}%
+\rsection{Skills}
+  \begin{rlinelist}
+    \rline
+      {Languages}
       {C++, C, Rust, Python, Java, Typescript, JavaScript, Go, OCaml, ReasonML, Bash, HTML, CSS,
-        LaTeX}
-    \vspace*{-2pt}
-    \resumeSubSubSubheading{Technologies}%
+        \LaTeX, Agda}
+    \rline
+      {Technologies}
       {Git, Docker, Terraform, MAAS, Node.js, React.js, Webpack, REST, Linux, Unix}
-  \end{resumeSubHeadingList}
+  \end{rlinelist}
 
-  \vspace*{0pt}
+\rsection{Experience}
+  \begin{rsectionlist}
+    \rsectionitem
+      {Future of Programming Lab}
+      {Ann Arbor, MI}
+      {Undergraduate Assistant Researcher}
+      {June 2021 -- Present}
+      
+      Formalizing and implementing Hazel, a functional programming language and novel live
+      programming environment capable of analysing and evaluating incomplete programs, with
+      Professor Cyrus Omar and a team of 20+ researchers.
 
-\section{Research}
-  \begin{resumeSubHeadingList}
-    \resumeSubheading%
-      {Future of Programming Lab}%
-      {Ann Arbor, MI}%
-      {Student Researcher}%
-      {June 2021 - Present}
+      \begin{rpointlist}
+        \rpointlone{Integrating the primitive String type, associated infix and mixfix operators,
+          and built-in functions into the Hazel system.}
+        \rpointlone{Designing and implementing a performant WebAssembly compiler and runtime for
+          Hazel supporting incomplete programs.}
+        \rpointlone{Formalizing, mechanizing, and publishing proofs of Hazel's error localization
+          semantics with the Agda proof assistant.}
+      \end{rpointlist}
 
-      \resumeSubheadingDescription{
-        Formalizing and implementing Hazel, a functional programming language and novel live
-        programming environment capable of analysing and evaluating incomplete programs, with
-        Professor Cyrus Omar and a team of 20+ researchers.
-      }
-  \end{resumeSubHeadingList}
+    \rsectionitem
+      {814 Interactive}
+      {Berwyn, PA}
+      {Software Development Intern}
+      {May 2021 -- June 2021}
 
-\section{Work}
-  \begin{resumeSubHeadingList}
-    \resumeSubheading%
-      {814 Interactive}%
-      {Berwyn, PA}%
-      {Software Development Intern}%
-      {May 2021 - June 2021}
+      Worked with React.js, Laravel Eloquent, and other web technologies to develop a tooling
+      prototype to ease the creation of location- and service-targeted website content and improve
+      SEO for local client businesses.
 
-      \resumeSubheadingDescription{
-        Worked with React.js, Laravel Eloquent, and other web technologies to develop a tooling
-        prototype to ease the creation of location- and service-targeted website content and improve
-        SEO for local client businesses.
-      }
+    \rsectionitem
+      {Huaxia Chinese School at Great Valley}
+      {Exton, PA}
+      {Front Desk Administrator}
+      {September 2018 -- June 2020}
 
-    \resumeSubheading%
-      {Huaxia Chinese School at Great Valley}%
-      {West Chester, PA}%
-      {Front Desk Administrator}%
-      {September 2018 - June 2020}
+      Managed instructor attendance, front desk logistics, and other day-to-day details; assisted
+      students and parents; and coordinated with school administrators and facility staff.
 
-      \resumeSubheadingDescription{
-        Managed instructor attendance and front desk logistics, assisted students and parents, and
-        coordinated with school administrators.
-      }
-  \end{resumeSubHeadingList}
-
-\section{Leadership}
-  \begin{resumeSubHeadingList}
-
-    \resumeSubheading%
-      {Conestoga High School Computer Science Club}%
-      {Berwyn, PA}%
-      {Co-President}%
+    \rsectionitem
+      {Conestoga High School, StogaCS}
+      {Berwyn, PA}
+      {Co-President}
       {September 2017 -- May 2021}
 
-      \resumeSubheadingDescription{
-        Organized and engaged members in weekly meetings to share knowledge and collaborate on
-        projects. Directed lectures and workshops on various topics, from text encoding to
-        REST APIs. Coordinated and led student-only trips to hackathons.
-      }
-  \end{resumeSubHeadingList}
+      Organized members in weekly meetings to share knowledge and collaborate on projects. Directed
+      lectures and workshops on various topics, from text encoding to REST APIs. Led student-only
+      trips to hackathons and events. Designed and maintained digital infrastructure, including a QR
+      code-based sign-in system built with Angular, Spring Boot, and MySQL.
+  \end{rsectionlist}
 
-\vspace*{-9pt}
-\section{Projects}
-  \begin{resumeSubHeadingList}
-    \resumeSubheading
+\rsection{Project Work}
+  \begin{rsectionlist}
+    \rsectionitem
       {Wikichan}
       {\small\itshape March 2019 -- Present}
       {\small \url{https://github.com/mirryi/wikichan}}
       {}
 
-      \resumeSubheadingDescription{
-        Using React.js, RxJS, and modern web technologies, developed a cross-platform browser
-        extension that queries Wikipedia and displays a helpful summary popup when hovering over a
-        word or phrase.
-      }
+      Using React.js, RxJS, and modern web technologies, developed a cross-platform browser
+      extension that queries Wikipedia and displays a helpful summary popup when hovering over a
+      word or phrase.
 
-    \resumeSubheading
+    \rsectionitem
       {Compilers Independent Study}
       {\small\itshape September 2020 -- May 2021}
       {\small \url{https://github.com/mirryi/isc}}
       {}
 
-      \resumeSubheadingDescription{
-        Engaged in an independent study course to learn about compiler infrastructure and
-        programming language design. Worked on building a basic compiler from scratch to transform a
-        minimal C-like language into x86 assembly, written in Rust.
-      }
-
-    \resumeSubheading
-      {StogaCS Infrastructure}
-      {\small\itshape June 2019 -- May 2021}
-      {\small \url{https://github.com/stogacs}}
-      {}
-
-      \resumeSubheadingDescription{
-        In collaboration with other members, designed, implemented, and maintained digital
-        infrastructure for the Computer Science Club, including a QR code-based meeting sign-in
-        application, built with Angular 8, MySQL, and AWS EC2.
-      }
-  \end{resumeSubHeadingList}
+      Engaged in an independent study course to learn about compiler infrastructure and programming
+      language design. Worked on building a basic compiler from scratch to transform a minimal
+      C-like language into x86 assembly, written in Rust.
+  \end{rsectionlist}
 \end{document}
