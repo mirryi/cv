@@ -1,4 +1,4 @@
-@default_files = ('cv.tex');
+@default_files = ('resume.tex');
 $out_dir = 'target';
 
 $pdf_mode = 1;
