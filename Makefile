@@ -2,7 +2,7 @@ DOCKER  ?= docker
 LATEXMK ?= latexmk
 
 SOURCES = resume.tex
-DEPS 		= preamble.tex
+DEPS    = preamble.tex
 TARGETS = $(patsubst %.tex,%.pdf,$(SOURCES))
 
 ifdef USE_DOCKER
