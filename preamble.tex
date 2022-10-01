@@ -8,7 +8,15 @@
 \raggedright
 \raggedbottom
 
-\usepackage{libertinus}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage{libertinust1math}
+  \usepackage{libertine}
+\else
+  \usepackage{libertinus}
+\fi
+\usepackage[scaled=0.8]{FiraMono}
+
 \usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
 
@@ -22,12 +30,14 @@
             pdftitle={Resume},
             pdfproducer={},
             pdfcreator={}]{hyperref}
-\hypersetup{}
 \urlstyle{same}
 
 \usepackage{titlesec}
 
 \setlength{\tabcolsep}{0in}
+
+\newcommand{\email}[3]{\href{mailto:#1@#2.#3}{#1@#2.#3}}
+\newcommand{\phonenumber}[4]{+#1-#2-#3-#4}
 
 \newcommand{\rheading}[4]{%
   \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
