@@ -1,7 +1,7 @@
 ---
 name: release-build
 
-on: 
+on:
   push:
     branches:
       - master
@@ -47,6 +47,6 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           automatic_release_tag: latest
           prerelease: false
-          title: Resume 
+          title: Resumé
           files: |
             resume.pdf
