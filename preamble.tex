@@ -2,11 +2,12 @@
 \pdfsuppressptexinfo-1
 \pdftrailerid{}
 
-\usepackage[top=0.3in, bottom=0.3in,
+\usepackage[top=0.3in, bottom=0.4in,
             left=0.4in, right=0.4in]{geometry}
 
 \raggedright
 \raggedbottom
+\pagenumbering{gobble}
 
 \usepackage{libertinus}
 
@@ -78,8 +79,8 @@
   \vspace*{-1.5\baselineskip}
 }
 \newcommand{\rline}[2]{
-  \item \begin{tabular*}{0.98\textwidth}{l}
-      \textbf{#1 } #2 \\
+  \item \begin{tabular*}{0.98\textwidth}{ll}
+      \textbf{#1:\ \ } & #2 \\
     \end{tabular*}
 }
 
