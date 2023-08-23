@@ -43,7 +43,7 @@ RUN apk --no-cache add make \
   && tlmgr update --self \
   && tlmgr update --list \
   && tlmgr install collection-latex latexmk enumitem titlesec xkeyval \
-  fontaxes libertinus libertinus-type1
+       fontaxes libertinus libertinus-type1 etoolbox
 
 WORKDIR /build
 COPY Makefile latexmkrc resume.tex preamble.tex ./
