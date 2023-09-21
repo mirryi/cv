@@ -22,4 +22,4 @@ jobs:
           draft: true
           title: Resumé
           files: |
-            resume.pdf
+            build/resume.pdf

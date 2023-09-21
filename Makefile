@@ -11,7 +11,7 @@ ifdef USE_DOCKER
 else
 %.pdf : %.tex $(DEPS)
 	$(LATEXMK) $*.tex
-	mv target/$*.pdf $*.pdf
+	mv build/$*.pdf $*.pdf
 endif
 
 .PHONY : all
@@ -20,4 +20,4 @@ all : $(TARGETS)
 .PHONY : clean
 clean :
 	rm -f *.pdf
-	rm -rf target
+	rm -rf build 
