@@ -14,142 +14,305 @@
     \rsectionitem
       {University of Michigan}
       {Ann Arbor, MI}
-      {B.S.E. in Computer Science; Minors in Mathematics, Asian Languages \& Cultures (GPA 4.00)}
-      {August 2021 -- May 2024}
-      %
-      \begin{rpointlist}
-        \rpoint
-          {Technical Coursework}
-          {Category Theory, Compiler Construction, Advanced Programming Languages,
-            Introduction to Operating Systems, Foundations of Computer Science,
-            Introduction to Computer Organisation, Data Structures and Algorithms,
-            Robotic Mechanisms,
-            Introduction to Modern Algebra, Linear Algebra, Discrete Mathematics,
-            Introduction to Probability, Multivariable \& Vector Calculus}
-        \rpoint
-          {Language Coursework}
-          {Practicum in Japanese Translation, Academic Japanese I, Advanced Spoken Japanese,
-            Third Year Japanese I \& II, Second Year Japanese I \& II,
-            Old English, Creative Writing}
-        \rpoint
-          {Activities}
-          {Eta Kappa Nu Honor Society (IEEE-HKN); Michigan Hackers;
-            Japanese Language Circle (Communications Chair);
-            CET Academic Programs Study Abroad in Osaka, Japan (Summer 2023)}
-        \rpoint
-          {Awards}
-          {James B. Angell Scholar, William J. Branstrom Prize, Dean's Honor List}
-      \end{rpointlist}
+      {B.S.E. in Computer Science, GPA: 4.00}
+      {Aug. 2021 -- May 2024}
+      
+      \rsectiondesc{
+        \begin{rpointlist}
+          \rpoint
+            {Minors}
+            {Mathematics, Asian Languages \& Cultures}
+          \rpoint
+            {Technical Coursework}
+            {Advanced Programming Languages, Compiler Construction,
+              Introduction to Operating Systems, Category Theory, Foundations of Computer Science,
+              Introduction to Computer Organisation, Data Structures and Algorithms,
+              Robotic Mechanisms,
+              Introduction to Modern Algebra, Linear Algebra, Discrete Mathematics,
+              Introduction to Probability, Multivariable \& Vector Calculus}
+          \rpoint
+            {Language Coursework}
+            {Practicum in Japanese Translation, Academic Japanese,
+              Third Year Japanese I \& II, Second Year Japanese I \& II,
+              Old English, Creative Writing}
+          \rpoint
+            {Honors}
+            {James B. Angell Scholar, William J. Branstrom Prize}
+        \end{rpointlist}
+      }
 
-    % \rsectionitem
-      % {Conestoga Senior High School}
-      % {Berwyn, PA}
-      % {GPA: 4.00, SAT: 1570/1600}
-      % {August 2017 -- June 2021}
-      % %
-      % \begin{rpointlist}
-        % \rpoint
-          % {Coursework}
-          % {Multivariable Calculus, AP Calculus BC, AP Computer Science A, AP Computer Science
-            % Principles, AP Statistics, AP Physics C: Mechanics, AP Physics C: Electricity and
-            % Magnetism, AP Chemistry, AP Biology, AP Psychology, AP Macroeconomics, AP Microeconomics,
-            % AP World History, AP US History, AP US Government \& Politics, AP English Language \&
-            % Composition, AP English Literature \& Composition}
-        % \rpoint
-          % {Activities \& Awards}
-          % {Computer Science Club, National Honor Society, KEY Club, Symphony Orchestra, National
-            % Merit Finalist, National AP Scholar, George Washington Book Award, Computer Science
-            % Scholar, Distinguished Honor Roll}
-      % \end{rpointlist}
+    \rsectionitem
+      {CET Academic Programs}
+      {Osaka, Japan}
+      {Summer Intensive Japanese Language}
+      {June 2023 -- Aug. 2023}
+
+      \rsectiondesc{
+        Participated in an two-month summer study abroad focused at Osaka Graduate University in
+        Osaka, Japan. Completed an intensive advanced Japanese language course and lived in
+        apartment accommodations with Japanese university students.
+      }
+
+    \rsectionitem
+      {Conestoga Senior High School}
+      {Berwyn, PA}
+      {GPA: 4.00, SAT: 1570/1600}
+      {Aug. 2017 -- June 2021}
+      
+      \rsectiondesc{
+        \begin{rpointlist}
+          % \rpoint
+            % {Coursework}
+            % {Multivariable Calculus, AP Calculus BC, AP Computer Science A, AP Computer Science
+              % Principles, AP Statistics, AP Physics C: Mechanics, AP Physics C: Electricity and
+              % Magnetism, AP Chemistry, AP Biology, AP Psychology, AP Macroeconomics, AP Microeconomics,
+              % AP World History, AP US History, AP US Government \& Politics, AP English Language \&
+              % Composition, AP English Literature \& Composition}
+          \rpoint
+            {Activities}
+            {Computer Science Club, National Honor Society, KEY Club, Symphony Orchestra}
+          \rpoint
+            {Honors}
+            {National Merit Finalist, National AP Scholar, George Washington Book Award,
+              Computer Science Scholar, Distinguished Honor Roll}
+        \end{rpointlist}
+      }
+  \end{rsectionlist}
+
+\rsection{Research}
+  \begin{rsectionlist}
+    \rsectionitem
+      {Incremental Type-Checking with Holes}
+      {University of Michigan}
+      {Advisor: Cyrus Omar}
+      {Mar. 2022 -- Present}
+
+      \rsectiondesc{
+        Designing an approach to incremental bidirectional type checking by encoding
+        provenantial type information into a binding graph with holes that may be incrementally
+        updated through an action semantics similar to the Hazelnut calculus.
+      }
+
+    \rsectionitem
+      {Bidirectional Type Error Localization and Recovery}
+      {University of Michigan}
+      {Advisor: Cyrus Omar}
+      {Oct. 2022 -- Present}
+
+      \rsectiondesc{
+        Developing the \emph{marked lambda calculus}, a judgmental framework for principled
+        localization of and recovery from type errors, combining key ideas from bidirectional and
+        gradual typing. I formalized the system and mechanized it in the Agda proof assistant,
+        proving that all the desired metatheorems are satisfied.
+
+        \textsc{Manuscript under review:}
+        \begin{adjustwidth}{1em}{}
+          \emph{Total Bidirectional Type Error Localization with Holes},
+          Principles of Programming Languages (POPL) 2024.
+        \end{adjustwidth}
+      }
+
+    \rsectionitem
+      {Compiling Functional Programs with Holes}
+      {University of Michigan}
+      {Advisor: Cyrus Omar}
+      {Jan. 2022 -- Sep. 2022}
+
+      \rsectiondesc{
+        Explored the design space of compiling incomplete functional programs, i.e. programs with
+        \emph{holes}. Designed a compilation scheme and runtime system for Hazel that targets
+        WebAssembly, including static analyses to optimize the speed of operations with holes.
+
+        \textsc{Accepted Abstract and Poster:}
+        \begin{adjustwidth}{1em}{}
+          \emph{Compiling Functional Programs with Holes},
+          2nd Place, Student Research Competition,
+          International Conference on Functional Programming (ICFP) 2023.
+        \end{adjustwidth}
+      }
+
+    \rsectionitem
+      {Zydeco: A Polymorphic Call-by-Push-Value Language}
+      {University of Michigan}
+      {Advisor: Max New}
+      {Sep. 2022 -- Dec. 2022}
+
+      \rsectiondesc{
+        Contributed to the development of a polymorphic call-by-push-value (CBPV) language as an
+        alternative intermediate representation for compiling functional programs and encoding
+        stack-based calling conventions. I helped to formalize the bidirectional typing semantics of
+        the language.
+      }
+
+    \rsectionitem
+      {Hazel: A Live Programming Environment with Typed Holes}
+      {University of Michigan}
+      {Advisor: Cyrus Omar}
+      {June 2021 -- Aug. 2022}
+
+      \rsectiondesc{
+        Assisted in the development of Hazel, a functional programming language and live programming
+        environment capable of analysing and evaluating incomplete programs. I worked to integrate
+        primitive string type and expressions, built-in expressions, environment-based evaluation,
+        live testing, and asynchronous evaluation for pedagogical uses of Hazel.
+      }
+  \end{rsectionlist}
+
+\rsection{Teaching}
+  \begin{rsectionlist}
+    \rsectionitem
+      {EECS 490: Programming Languages}
+      {Ann Arbor, MI}
+      {Instructional Aide}
+      {Aug. 2023 -- Present}
+
+      \rsectiondesc{
+        Teaching weekly discussion sections and conduct office hours for over 80 undergraduate students
+        in an introductory course on programming language theory and design, covering topics from
+        functional programming language semantics to imperative program verification and distributed
+        computation models.
+      }
+  \end{rsectionlist}
+
+\rsection{Awards}
+  \begin{rsectionlist}
+    \rsectionitem
+      {U.S. Department of Education Foreign Language and Area Studies Fellowship}
+      {University of Michigan}
+      {For Summer 2023}
+      {Apr. 2023}
+
+      \rsectiondesc{
+        Awarded \$5000 in tuition and \$2500 in stipend for participation in the CET Academic
+        Programs summer intensive language study abroad in Osaka, Japan.
+      }
+
+    \rsectionitem
+      {Center for Japanese Studies Undergraduate Study Abroad Scholarship}
+      {University of Michigan}
+      {For Summer 2023}
+      {Apr. 2023}
+
+      \rsectiondesc{
+        Awarded a \$500 stipend in addition to the Foreign Language and Area Studies Fellowship.
+      }
+  \end{rsectionlist}
+
+\rsection{Certifications}
+  \begin{rsectionlist}
+    \rsectionitemthin
+      {Japanese Language Proficiency Test N1}
+      { \textsc{in-progress}}
+      {Dec. 2023}
+
+    \vspace*{-1em}
+    \rsectionitemthin
+      {Japanese Language Proficiency Test N3}
+      { \textsc{full marks, 180/180}}
+      {Dec. 2022}
+  \end{rsectionlist}
+
+\rsection{Service}
+  \begin{rsectionlist}
+    \rsectionitemthin
+      {Student Volunteer}
+      {, Midwest Programming Language Summit (MWPLS) 2023}
+      {Dec. 2022}
+
+    \vspace*{-1em}
+    \rsectionitemthin
+      {Student Volunteer}
+      {, International Conference on Functional Programming (ICFP) 2022}
+      {Sep. 2022}
   \end{rsectionlist}
 
 \rsection{Skills}
   \begin{rlinelist}
     \rline
       {Technologies}
-      {C++, C, Rust, OCaml, Python, Java, Typescript, JavaScript, Go, Bash, HTML, CSS, \LaTeX, Agda \\
-        & Git, Docker, CI/CD, Terraform, React, Node.js, REST, Linux, Unix}
+      {C++, C, Rust, OCaml, Python, Java, Typescript, \LaTeX, Agda,
+      Git, Docker, CI/CD, React, Linux, Unix}
+      
     \rline
-      {Certifications}
-      {Japanese Language Proficiency Test (JLPT) N1 (in-progress), JLPT N3 (full score)}
+      {Languages}
+      {English (native), Japanese (working proficiency), Mandarin Chinese (working proficiency)}
   \end{rlinelist}
 
-\rsection{Experience}
+\rsection{Extracurriculars}
   \begin{rsectionlist}
     \rsectionitem
-      {EECS 490: Programming Languages}
-      {Ann Arbor, MI}
-      {Instructional Aide}
-      {August 2023 -- Present}
+      {Japanese Language Circle}
+      {Ann Arbor, PA}
+      {Communications Chair}
+      {May 2023 -- Present}
 
-      Teaching weekly discussion sections and conducting office hours for over 80 undergraduate
-      students in an introductory course on programming language theory and design, covering topics
-      from functional programming language semantics to imperative program verification and
-      distributed computation models.
-
-    \rsectionitem
-      {Future of Programming Lab}
-      {Ann Arbor, MI}
-      {Research Assistant}
-      {June 2021 -- Present}
-      
-      Formalising and implementing \href{https://hazel.org}{Hazel}, a functional programming
-      language and live programming environment capable of analysing and evaluating incomplete
-      programs, i.e. programs with holes, under Cyrus Omar.
-
-      \begin{rpointlist}
-        \rpointlone{Formalising and mechanising (in the Agda proof assistant) the \emph{marked
-          lambda calculus}, a judgmental framework to formally specify bidirectional typing semantics
-          with principled localisation of and recovery from type errors.}
-        \rpointlone{Designing a compiler and runtime with support to efficiently analyse, compile,
-          and execute incomplete programs. \\
-          \href{https://icfp22.sigplan.org/details/icfp-2022-student-research-competition/2/Compiling-Functional-Programs-with-Holes}{\emph{Compiling Functional Programs with Holes}}
-          won 2nd Place at the 2022 International Conference on Functional Programming
-          (\href{https://icfp22.sigplan.org/}{ICFP}) Student Research Competition.}
-        \rpointlone{Worked to integrate primitive string type and expressions, built-in expressions,
-          environment-based evaluation, live testing, and asynchronous evaluation for pedagogical
-          uses of Hazel, particularly in the course EECS 490: Programming Languages.}
-      \end{rpointlist}
-
-    % \rsectionitem
-      % {Michigan Programming Languages and Software Engineering (MPLSE)}
-      % {Ann Arbor, MI}
-      % {Research Assistant}
-      % {September 2022 -- Present}
-
-      % Contributing to the formalisation of a polymorphic call-by-push-value (CBPV) language as an
-      % alternative intermediate representation for compiling functional programs and encoding
-      % stack-based calling conventions, under Max S. New.
+      \rsectiondesc{
+        Handle communications with members and department administration, organize and run
+        conversation tables twice a week, and coordinate with Japanese language instructors to
+        conduct special events in relation to Japanese language and culture.
+      }
 
     \rsectionitem
-      {814 Interactive}
-      {Berwyn, PA}
-      {Software Development Intern}
-      {May 2021 -- June 2021}
+      {IEEE Eta Kappa Nu (HKN), Beta Epsilon Chapter}
+      {Ann Arbor, PA}
+      {Member}
+      {Sep. 2022 -- Present}
 
-      Worked with React, Laravel Eloquent, and other web technologies to develop a tooling prototype
-      to ease the creation of location- and service-targeted website content and improve SEO for
-      local client businesses.
-
+      \rsectiondesc{
+        Engage in service activities, especially tutoring fellow students in introductory computer
+        science and engineering courses.
+      }
+    
     \rsectionitem
       {Conestoga High School Computer Science Club}
       {Berwyn, PA}
       {Co-President}
-      {September 2017 -- May 2021}
+      {Sep. 2017 -- May 2021}
 
-      Organised members in weekly meetings, directed workshops on various topics, and led student
-      trips to competitions. Built digital infrastructure, including a QR code-based sign-in system
-      with Angular, Spring Boot, and MySQL.
-
-    \rsectionitem
-      {Huaxia Chinese School at Great Valley}
-      {Exton, PA}
-      {Front Desk Administrator}
-      {September 2018 -- June 2020}
-
-      Managed instructor attendance, assisted students and parents, and coordinated with school
-      administrators and facility staff.
+      \rsectiondesc{
+        Organised members in weekly meetings, directed workshops on various topics, and led student
+        trips to competitions. Built digital infrastructure, including a QR code-based sign-in
+        system with Angular, Spring Boot, and MySQL.
+      }
   \end{rsectionlist}
+
+% \rsection{Work Experience}
+  % \begin{rsectionlist}
+    % \rsectionitem
+      % {Future of Programming Lab}
+      % {Ann Arbor, MI}
+      % {Research Assistant}
+      % {June 2021 -- Present}
+      
+      % Formalising and implementing \href{https://hazel.org}{Hazel}, a functional programming
+      % language and live programming environment capable of analysing and evaluating incomplete
+      % programs, i.e. programs with holes, under Cyrus Omar.
+
+      % \begin{rpointlist}
+        % \rpointlone{Worked to integrate primitive string type and expressions, built-in expressions,
+          % environment-based evaluation, live testing, and asynchronous evaluation for pedagogical
+          % uses of Hazel, particularly in the course EECS 490: Programming Languages.}
+      % \end{rpointlist}
+
+    % \rsectionitem
+      % {814 Interactive}
+      % {Berwyn, PA}
+      % {Software Development Intern}
+      % {May 2021 -- June 2021}
+
+      % Worked with React, Laravel Eloquent, and other web technologies to develop a tooling prototype
+      % to ease the creation of location- and service-targeted website content and improve SEO for
+      % local client businesses.
+
+    % \rsectionitem
+      % {Huaxia Chinese School at Great Valley}
+      % {Exton, PA}
+      % {Front Desk Administrator}
+      % {Sep. 2018 -- June 2020}
+
+      % Managed instructor attendance, assisted students and parents, and coordinated with school
+      % administrators and facility staff.
+  % \end{rsectionlist}
 
 % \rsection{Other Projects}
   % \begin{rsectionlist}
