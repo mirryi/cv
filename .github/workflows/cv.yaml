@@ -11,15 +11,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+
       - uses: xu-cheng/latex-action@v2
         with:
-          root_file: resume.tex
+          root_file: cv.tex
+
       - uses: marvinpinto/action-automatic-releases@latest
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           automatic_release_tag: latest
           prerelease: true
           draft: false
-          title: Resumé
+          title: Curriculum Vitae
           files: |
-            build/resume.pdf
+            build/cv.pdf
