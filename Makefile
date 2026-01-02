@@ -1,7 +1,7 @@
 DOCKER  ?= docker
 LATEXMK ?= latexmk
 
-SOURCES = resume.tex
+SOURCES = resume.tex cv.tex
 DEPS    = preamble.tex
 TARGETS = $(patsubst %.tex,%.pdf,$(SOURCES))
 

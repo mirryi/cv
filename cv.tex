@@ -1,0 +1,246 @@
+\RequirePackage[l2tabu,orthodox]{nag} % warn if using any obsolete commands
+\documentclass[11pt,letterpaper]{report} % document style
+
+% load encoding and font packages for pdflatex, in order
+\usepackage[T1]{fontenc}    % output 8-bit encoded fonts
+\usepackage[utf8]{inputenc} % allow input of utf-8 encoded characters
+\usepackage{ebgaramond}     % document's serif font
+\usepackage{tgheros}        % document's sans serif font
+\usepackage[scaled=0.8]{FiraMono}       % document's monospace font
+
+% load babel, csquotes, and microtype in order
+\usepackage[USenglish]{babel} % auto-regionalize hyphens, quote marks, etc
+\usepackage[strict,autostyle]{csquotes} % smart and nestable quote marks
+\usepackage[babel=true]{microtype} % enable micro-typographic adjustments
+
+% load bibliography tools
+\usepackage[backend=biber, maxnames=99, minnames=99, style=authortitle]{biblatex}
+\addbibresource{references.bib}
+
+% load everything else
+\usepackage{datetime} % enable formatting of date output
+\usepackage{enumitem} % enumerate with [resume] option
+\usepackage{geometry} % manually set page margins
+\usepackage{setspace} % custom line spacing
+\usepackage{tabto}    % make nice tabbing
+\usepackage{titlesec} % allow custom section fonts
+
+% load hyperref last for compatibility
+\usepackage{hyperref} % enable hyperlinks and pdf metadata
+
+% what is your name?
+\newcommand{\myname}{Eric Zhao}
+
+% what are your keywords?
+\newcommand{\mykeywords}{programming languages, formal methods, formal verification, program analysis, proof assistants}
+
+% how far to tab for list items with left-aligned date: different fonts need different widths
+\newcommand{\listtabwidth}{1.7cm}
+
+% define font to use as document's title
+\newcommand{\namefont}[1]{{\normalfont\bfseries\Huge{#1}}}
+
+% set section heading fonts and before/after spacing
+\SetTracking{encoding=*, family=\sfdefault}{30} % increase heading font tracking
+\titleformat{\section}{\lsstyle\sffamily\small\bfseries\uppercase}{}{}{}{}
+\titlespacing{\section}{0pt}{30pt plus 4pt minus 4pt}{8pt plus 2pt minus 2pt}
+
+% set subsection heading fonts and before/after spacing
+\titleformat{\subsection}{\lsstyle\sffamily\footnotesize\bfseries}{}{}{}{}
+\titlespacing{\subsection}{0pt}{16pt plus 4pt minus 4pt}{4pt plus 2pt minus 2pt}
+
+% set page margins (assumes letter paper)
+\geometry{body={6.5in, 9.0in},
+    left=1.0in,
+    top=1.0in}
+
+% prevent paragraph indentation
+\setlength\parindent{0em}
+
+% set line spacing
+\setstretch{0.9}
+
+% define space between list items
+\newcommand{\listitemspace}{0.25em}
+
+% make unordered lists without bullets and use compact spacing
+\renewenvironment{itemize}
+{\begin{list}{}{\setlength{\leftmargin}{0em}
+                \setlength{\parskip}{0em}
+                \setlength{\itemsep}{\listitemspace}
+                \setlength{\parsep}{\listitemspace}}}
+{\end{list}}
+
+% make tabbed lists so content is left-aligned next to years
+\TabPositions{\listtabwidth}
+\newlist{tablist}{description}{3}
+\setlist[tablist]{leftmargin=\listtabwidth,
+    labelindent=0em,
+    topsep=0em,
+    partopsep=0em,
+    itemsep=\listitemspace,
+    parsep=\listitemspace,
+    font=\normalfont}
+
+% print only the month and year when using \today
+\newdateformat{monthyeardate}{\monthname[\THEMONTH] \THEYEAR}
+
+% define hyperlink appearance and metadata for pdf properties
+\hypersetup{
+    colorlinks  = true,
+    urlcolor    = black,
+    citecolor   = black,
+    linkcolor   = black,
+    pdfauthor   = {\myname},
+    pdfkeywords = {\mykeywords},
+    pdftitle    = {\myname: Curriculum Vitae},
+    pdfsubject  = {Curriculum Vitae},
+    pdfpagemode = UseNone
+}
+
+% make my name emphasised in references
+\newcommand{\makeauthoremph}[1]{%
+  \DeclareNameFormat{author}{%
+    \ifthenelse{\value{listcount}=1}
+    {%
+      {\expandafter\ifstrequal\expandafter{\namepartfamily}{#1}{\mkbibemph{\namepartfamily\addcomma\addspace \namepartgiveni}}{\namepartfamily\addcomma\addspace \namepartgiveni}}
+      %
+    }{\ifnumless{\value{listcount}}{\value{liststop}}
+        {\expandafter\ifstrequal\expandafter{\namepartfamily}{#1}{\mkbibemph{\addcomma\addspace \namepartfamily\addcomma\addspace \namepartgiveni}}{\addcomma\addspace \namepartfamily\addcomma\addspace \namepartgiveni}}
+        {\expandafter\ifstrequal\expandafter{\namepartfamily}{#1}{\mkbibemph{\addcomma\addspace \namepartfamily\addcomma\addspace \namepartgiveni\addcomma\isdot}}{\addcomma\addspace \namepartfamily\addcomma\addspace \namepartgiveni\addcomma\isdot}}%
+      }
+    \ifthenelse{\value{listcount}<\value{liststop}}
+    {\addcomma\space}{}
+  }
+}
+\makeauthoremph{Zhao}
+
+\begin{document}
+
+\raggedright{}
+
+% display your name as the document title
+\namefont{\myname}
+
+% affiliation and contact info blocks
+\vspace{1em}
+\begin{minipage}[t]{0.700\textwidth}
+  % current primary affiliation, left-aligned
+  Department of Computer Science \\
+  Brown University \\
+  Providence, RI, USA
+\end{minipage}
+%
+\begin{minipage}[t]{0.295\textwidth}
+  % contact info details, right-aligned
+  \raggedleft{}
+  \href{mailto:eric_c_zhao@brown.edu}{eric\_c\_zhao@brown.edu} \\
+  +1 610 504 8573 \\
+  \href{https://mustardfox.org}{mustardfox.org}
+\end{minipage}
+
+\section*{Education}
+\begin{tablist}
+  \item[Ph.D.]  \tab{}Computer Science, Brown University \hfill 2024--present \\
+           \emph{Supervisors:} Nikos Vasilakis \& Robert Lewis \\
+           \emph{Research areas:} programming languages \& formal methods
+
+  \item[B.S.E.] \tab{}{Computer Science, University of Michigan, Ann Arbor} \hfill 2021--2024 \\
+\end{tablist}
+
+\section*{Experience}
+\begin{tablist}
+  \item[2021--24] \tab{}Research Assistant, University of Michigan, Ann Arbor \\
+                   \emph{Supervisor:} Cyrus Omar \\
+
+  \item[2023]     \tab{}Visiting Student, Osaka Graduate University
+\end{tablist}
+
+\section*{Publications}
+
+\subsection*{Peer-reviewed Conference Proceedings}
+\begin{tablist}
+  \item[2025] \tab{}\fullcite{DBLP:journals/pacmpl/AdamsGPSZO25}
+
+  \item[2024] \tab{}\fullcite{DBLP:journals/pacmpl/ZhaoMDBPO24}
+\end{tablist}
+
+\subsection*{Peer-reviewed Workshop Proceedings}
+\begin{tablist}
+  \item[2025] \tab{}\fullcite{DBLP:conf/hotos/LazarekJLLNZ0KM25}
+\end{tablist}
+
+\section*{Talks}
+\begin{tablist}
+  \item[2025] \tab{}\enquote{Automated Reasoning for File System Interactions.}
+      36th New England Programming Languages and Systems Symposium.
+      Boston, Massachusetts. Nov 17.
+
+  \item[2024] \tab{}\enquote{Total Type Error Localization and Recovery with Holes.}
+      51st ACM SIGPLAN Symposium on Principles of Programming Languages.
+      London, United Kingdom. Jan 14--20.
+
+  \item[2022] \tab{}\enquote{Compiling Functional Programs with Holes.}
+      27th ACM SIGPLAN International Conference on Functional Programming.
+      Student Research Competition.
+      Ljubljana, Slovenia. Sept 13.
+\end{tablist}
+
+\section*{Grants and Awards}
+
+\subsection*{Fellowships}
+\begin{tablist}
+  \item[2024--29] \tab{}Graduate Research Fellowship (\$159,000)\@. \\
+                   National Science Foundation. One of 2,037 awardees.
+
+  \item[2023]     \tab{}Foreign Language and Area Studies Fellowship (\$7,500)\@. \\
+                   U.S. Department of Education
+
+  \item[2023]     \tab{}Center for Japanese Studies Undergraduate Study Abroad Scholarship (\$500)\@. \\
+                   University of Michigan, Ann Arbor
+\end{tablist}
+
+\subsection*{Honors}
+\begin{tablist}
+  \item[2024] \tab{}James B. Angell Scholar
+  \item[2024] \tab{}Japanese Language Award
+  \item[2024] \tab{}Japanese National Honor Society
+  \item[2022] \tab{}William J. Branstrom Prize
+\end{tablist}
+
+\section*{Teaching}
+\begin{tablist}
+  \item[2023--24] \tab{}EECS 490: Programming Languages, Teaching Assistant \\
+                   University of Michigan, Ann Arbor \\
+                   \emph{Lead instructor:} Cyrus Omar
+\end{tablist}
+
+\section*{Service}
+
+\subsection*{Volunteering}
+\begin{tablist}
+  \item[2023] \tab{}6th Midwest Programming Languages Summit.
+      Ann Arbor, Michigan.
+      Oct 6.
+
+  \item[2022] \tab{}27th ACM SIGPLAN International Conference on Functional Programming.
+      Ljubljana, Slovenia.
+      Sept 11--16.
+\end{tablist}
+
+\section*{Certifications}
+\begin{tablist}
+  \item[2024] \tab{}Japanese Language Proficiency Test, N1 \\
+                Japan Ministry of Education, Culture, Sports, Science and Technology
+\end{tablist}
+
+\section*{Languages}
+English (native) ~ Japanese (limited working proficiency) ~ Mandarin (limited working proficiency)
+
+% display today's date as Month Year after a vertical space below the end of the text
+\begin{center}
+    \vfill
+    \emph{Last updated: \monthyeardate\today}
+\end{center}
+
+\end{document}
