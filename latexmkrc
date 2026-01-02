@@ -1,4 +1,3 @@
-@default_files = ('resume.tex');
 $out_dir = 'build';
 
 $pdf_mode = 1;
