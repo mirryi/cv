@@ -5,14 +5,9 @@ SOURCES = resume.tex
 DEPS    = preamble.tex
 TARGETS = $(patsubst %.tex,%.pdf,$(SOURCES))
 
-ifdef USE_DOCKER
-%.pdf : %.tex $(DEPS)
-	DOCKER_BUILDKIT=1 $(DOCKER) build . --output .
-else
 %.pdf : %.tex $(DEPS)
 	$(LATEXMK) $*.tex
 	mv build/$*.pdf $*.pdf
-endif
 
 .PHONY : all
 all : $(TARGETS)
