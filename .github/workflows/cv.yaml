@@ -1,0 +1,43 @@
+---
+name: release-build
+
+on:
+  push:
+    branches:
+      - master
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: true
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+      contents: write
+    steps:
+      - name: Delete previous runs
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          gh run list -w "${{ github.workflow }}" -s completed -L 1000 --json databaseId \
+            -q '.[].databaseId' |
+            xargs -r -I{} sh -c 'gh run delete {} || true'
+
+      - uses: actions/checkout@v3
+
+      - uses: xu-cheng/latex-action@v2
+        with:
+          root_file: cv.tex
+
+      - uses: marvinpinto/action-automatic-releases@latest
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          automatic_release_tag: latest
+          prerelease: true
+          draft: false
+          title: Curriculum Vitae
+          files: |
+            build/cv.pdf

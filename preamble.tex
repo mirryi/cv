@@ -1,0 +1,114 @@
+\pdfinfoomitdate1
+\pdfsuppressptexinfo-1
+\pdftrailerid{}
+
+\usepackage[top=0.3in, bottom=0.3in,
+            left=0.4in, right=0.4in]{geometry}
+
+\raggedright
+\raggedbottom
+\pagenumbering{gobble}
+
+\usepackage{libertinus}
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+
+\usepackage{changepage}
+
+\usepackage{tabularx}
+\usepackage{enumitem}
+\renewcommand{\labelitemii}{$\circ$}
+
+\usepackage[dvipsnames]{xcolor}
+\definecolor{antiquefuchsia}{rgb}{0.57, 0.36, 0.51}
+\definecolor{darklava}{rgb}{0.28, 0.24, 0.2}
+
+\usepackage[hidelinks,
+            colorlinks=true,
+            urlcolor=darklava,
+            pdftex,
+            pdfauthor={Eric Zhao},
+            pdftitle={Resume},
+            pdfproducer={},
+            pdfcreator={}]{hyperref}
+\urlstyle{same}
+
+\usepackage{titlesec}
+
+\setlength{\tabcolsep}{0in}
+
+\newcommand{\email}[3]{\href{mailto:#1@#2.#3}{#1@#2.#3}}
+\newcommand{\phonenumber}[4]{+#1-#2-#3-#4}
+
+\newcommand{\rheading}[4]{%
+  \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+    \textsc{\textbf{\LARGE #1}} & #2 \\
+    #3        & #4
+  \end{tabular*}
+  \vspace*{-\baselineskip}
+}
+
+\titleformat{\section}
+  {\scshape\raggedright\Large\bfseries}
+  {}
+  {0em}
+  {}
+  [\titlerule{}\vspace*{-0.3\baselineskip}]
+\newcommand{\rsection}[1]{
+  \section{#1}
+}
+
+\newenvironment{rsectionlist}{
+  \begin{itemize}[leftmargin=*, itemsep=0.75em, label={}]
+}{
+  \end{itemize}
+  \vspace*{-1.5em}
+}
+\newcommand{\rsectionitem}[4]{
+  \item \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{#3} & \textit{\small #4}
+    \end{tabular*}
+}
+
+\newcommand{\rsectionitemthin}[3]{
+  \item \begin{minipage}{0.98\textwidth} \textbf{#1}#2 \hfill #3 \end{minipage}
+}
+
+
+\newcommand{\rsectiondesc}[1]{
+  \begin{minipage}{0.98\textwidth} #1 \end{minipage}
+}
+
+\newenvironment{rlinelist}{
+  \begin{itemize}[leftmargin=*, label={}]
+  \setlength{\itemsep}{0pt}
+  \setlength{\parskip}{2pt}
+  \setlength{\parsep}{0pt}
+}{
+  \end{itemize}
+  \vspace*{-1.5\baselineskip}
+}
+\newcommand{\rline}[2]{
+  \item \begin{tabular*}{0.98\textwidth}{ll}
+      \textbf{#1\ \ } & #2
+    \end{tabular*}
+}
+
+\newenvironment{rpointlist}{
+  \begin{itemize}
+  \setlength{\itemsep}{0pt}
+  \setlength{\parskip}{1pt}
+  \setlength{\parsep}{0pt}
+}{
+  \end{itemize}
+}
+\newcommand{\rpoint}[2]{
+  \item \small{\textbf{#1}{: #2}}
+}
+\newcommand{\rpointlone}[1]{
+  \item \small{#1}
+}
